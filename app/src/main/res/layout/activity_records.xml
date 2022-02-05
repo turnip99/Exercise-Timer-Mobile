@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RecordsActivity"
+        android:id="@+id/constraintLayout">
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineMainLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineMainRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineTitleTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblTitle"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineTitleTop"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineTitleBottom"
+            android:text="My Records" android:textSize="36sp" android:textStyle="bold" android:gravity="center"
+            android:textColor="@color/colourBlack"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineTitleBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineExerciseDayTodayTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblExerciseDayToday"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineExerciseDayTodayTop"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineExerciseDayTodayBottom"
+            android:text="" android:textSize="20sp" android:gravity="right"
+            android:textColor="@color/colourDarkGreen"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineExerciseDayTodayBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.21"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblExerciseDayYesterday"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineExerciseDayTodayBottom"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineExerciseDayYesterdayBottom"
+            android:text="" android:textSize="20sp" android:gravity="right"
+            android:textColor="@color/colourDarkGreen"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineExerciseDayYesterdayBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblExerciseDayBest"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineExerciseDayYesterdayBottom"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineExerciseDayBestBottom"
+            android:text="" android:textSize="20sp" android:gravity="right"
+            android:textColor="@color/colourDarkBlue"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineExerciseDayBestBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineExerciseWeekThisTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.39"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblExerciseWeekThis"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineExerciseWeekThisTop"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineExerciseWeekThisBottom"
+            android:text="" android:textSize="20sp" android:gravity="right"
+            android:textColor="@color/colourDarkGreen"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineExerciseWeekThisBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.46"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblExerciseWeekLast"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineExerciseWeekThisBottom"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineExerciseWeekLastBottom"
+            android:text="" android:textSize="20sp" android:gravity="right"
+            android:textColor="@color/colourDarkGreen"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineExerciseWeekLastBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.53"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblExerciseWeekBest"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineExerciseWeekLastBottom"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineExerciseWeekBestBottom"
+            android:text="" android:textSize="20sp" android:gravity="right"
+            android:textColor="@color/colourDarkBlue"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineExerciseWeekBestBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineDelayTodayTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.64"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDelayToday"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDelayTodayTop"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDelayTodayBottom"
+            android:text="" android:textSize="20sp" android:gravity="right"
+            android:textColor="@color/colourDarkOrange"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineDelayTodayBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.71"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDelayYesterday"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDelayTodayBottom"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDelayYesterdayBottom"
+            android:text="" android:textSize="20sp" android:gravity="right"
+            android:textColor="@color/colourDarkOrange"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineDelayYesterdayBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.78"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDelayBest"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDelayYesterdayBottom"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDelayBestBottom"
+            android:text="" android:textSize="20sp" android:gravity="right"
+            android:textColor="@color/colourRed"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineDelayBestBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85"/>
+</android.support.constraint.ConstraintLayout>

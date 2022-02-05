@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Exercise Timer</string>
+    <string name="arrow">\u27a1</string>
+
+    <string-array name="focus_array">
+        <item>Whole Body</item>
+        <item>Core</item>
+        <item>Shoulders</item>
+        <item>Back</item>
+        <item>Arms</item>
+        <item>Legs</item>
+        <item>Neck</item>
+        <item>Hips</item>
+        <item>Wrist</item>
+    </string-array>
+
+    <string-array name="all_focus_array">
+        <item>All</item>
+        <item>Whole Body</item>
+        <item>Core</item>
+        <item>Shoulders</item>
+        <item>Back</item>
+        <item>Arms</item>
+        <item>Legs</item>
+        <item>Neck</item>
+        <item>Hips</item>
+        <item>Wrist</item>
+    </string-array>
+
+    <string-array name="equipment_array">
+        <item>None</item>
+        <item>Ball</item>
+        <item>Band</item>
+        <item>Box</item>
+        <item>Weights</item>
+    </string-array>
+
+    <string-array name="colour_array">
+        <item>White</item>
+        <item>Grey</item>
+        <item>Yellow</item>
+        <item>Blue</item>
+    </string-array>
+
+    <string-array name="reminder_array">
+        <item>Alarm</item>
+        <item>Bang</item>
+        <item>Beep</item>
+        <item>Coin</item>
+    </string-array>
+
+    <string-array name="days_array">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+</resources>

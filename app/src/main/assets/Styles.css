@@ -1,0 +1,97 @@
+body
+{
+	font-family: "Apple Chancery", Times, serif;
+	background-color: #FFFFFF;
+}
+
+#titleDiv
+{
+	text-align: center;
+	width:100%;
+	margin-bottom:2%;
+}
+
+#title
+{
+	width: 50%;
+	font-size:1.3em;
+	font-weight:bold;
+}
+
+img
+{
+    height:40vh;
+}
+
+#imageDiv
+{
+	float: right;
+	margin-left:1%;	
+}
+
+#textDiv
+{
+	clear: left;
+}
+
+@media screen and (min-width: 721px)
+{
+	#textDiv
+	{
+		font-size: 1.5em; /*Normal font size on mobile phone/small tablet screens.*/
+	}
+	#title
+	{
+	   font-size:2em;
+	}
+}
+@media screen and (max-width: 720px)
+{
+	#textDiv
+	{
+		font-size: 1em; /*Normal font size on PC/large tablet screens.*/
+	}
+}
+
+@media screen and (orientation:landscape) /*Some sizing css is different for landscape orientation.*/
+{
+   img
+   {
+        height:75vh;
+   }
+   #title
+   {
+	   font-size:2em;
+   }
+}
+
+@media screen and (orientation:portrait) /*Some positioning css is different for portrait orientation.*/
+{
+	#titleDiv
+	{
+		margin-bottom:7%;
+	}
+}
+
+#btnBackwards
+{
+	float:left;
+	text-align: left;
+}
+
+#btnForwards
+{
+	float:right;
+	text-align: right;
+}
+
+input[type=button]
+{
+	font-size: 2em;
+	
+}
+
+#mainDiv
+{
+	clear:both; 
+}

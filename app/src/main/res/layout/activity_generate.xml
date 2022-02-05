@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".GenerateActivity"
+        android:id="@+id/constraintLayout">
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineMainLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineMainRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineDurationTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDuration"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDurationTop"
+            app:layout_constraintRight_toLeftOf="@+id/txtDuration"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDurationBottom"
+            android:text="Duration: " android:textSize="20sp"/>
+    <EditText
+            android:id="@+id/txtDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDurationTop"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintLeft_toRightOf="@+id/lblDuration"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDurationBottom"
+            android:textSize="20sp" android:singleLine="true"
+            android:fitsSystemWindows="false" android:maxLength="6"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineDurationBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.13"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineButtonTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15"/>
+    <Button
+            android:text="Generate"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/btnGenerate"
+            android:textAllCaps="false"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineButtonTop"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineButtonBottom"
+            android:background="@drawable/button_green_border"
+            android:textSize="34sp" android:textStyle="bold"
+            android:paddingBottom="1dp" android:paddingLeft="12dp"
+            android:paddingRight="12dp" android:paddingTop="1dp"
+            android:onClick="GenerateClick"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineButtonBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineExercisesTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.32"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/lblExercises"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineExercisesTop"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineTimeTop"
+            android:background="@drawable/blue_border"
+            android:text="" android:textSize="20sp" android:paddingTop="2dp" android:paddingBottom="2dp" android:scrollbars="vertical"
+            android:textColor="@color/colourBlack" android:paddingLeft="6dp" android:paddingRight="6dp"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineTimeTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.88"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblTime"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineTimeTop"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineTimeBottom"
+            android:text="" android:textSize="36sp" android:textStyle="bold" android:gravity="center"
+            android:textColor="@color/colourBlack"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineTimeBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.97"/>
+    
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ManageActivity"
+        android:id="@+id/constraintLayout">
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineMainLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineMainRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineScrollTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03"/>
+    <ListView
+            android:id="@+id/exerciseList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineScrollTop"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineScrollBottom"
+            android:listSelector="@color/colourDarkBlue">
+    </ListView>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineScrollBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.34"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineNameTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.38"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblName"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineNameTop"
+            app:layout_constraintRight_toLeftOf="@+id/txtName"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineNameBottom"
+            android:text="Name: " android:textSize="18sp"/>
+    <EditText
+            android:id="@+id/txtName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineNameTop"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintLeft_toRightOf="@+id/lblName"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineNameBottom"
+            android:background="@android:drawable/editbox_background" android:textSize="18sp"
+            android:singleLine="true" android:fitsSystemWindows="false" android:maxLength="30"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineNameBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.44"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblFocus"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineNameBottom"
+            app:layout_constraintRight_toLeftOf="@+id/spnFocus"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineFocusBottom"
+            android:text="Focus: " android:textSize="18sp"/>
+    <Spinner
+            android:id="@+id/spnFocus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/focus_array"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineNameBottom"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintLeft_toRightOf="@+id/lblFocus"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineFocusBottom"
+            android:textSize="18sp" android:clickable="false"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineFocusBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDuration1"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineFocusBottom"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDurationBottom"
+            android:text="Duration: " android:textSize="18sp"/>
+    <EditText
+            android:id="@+id/txtDuration1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineFocusBottom"
+            app:layout_constraintLeft_toRightOf="@+id/lblDuration1"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDurationBottom"
+            android:background="@android:drawable/editbox_background" android:textSize="18sp"
+            android:singleLine="true" android:inputType="number" android:maxLength="3"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDuration2"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineFocusBottom"
+            app:layout_constraintRight_toLeftOf="@+id/txtDuration2"
+            app:layout_constraintLeft_toRightOf="@+id/txtDuration1"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDurationBottom"
+            android:text="-" android:textSize="18sp"/>
+    <EditText
+            android:id="@+id/txtDuration2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineFocusBottom"
+            app:layout_constraintRight_toLeftOf="@+id/lblDuration3"
+            app:layout_constraintLeft_toRightOf="@+id/lblDuration2"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDurationBottom"
+            android:background="@android:drawable/editbox_background" android:textSize="18sp"
+            android:singleLine="true" android:inputType="numberSigned" android:maxLength="3"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDuration3"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineFocusBottom"
+            app:layout_constraintLeft_toRightOf="@+id/txtDuration2"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDurationBottom"
+            android:text="s" android:textSize="18sp"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineDurationBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.56"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblReps1"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDurationBottom"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineRepsBottom"
+            android:text="Reps: " android:textSize="18sp"/>
+    <EditText
+            android:id="@+id/txtReps1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDurationBottom"
+            app:layout_constraintLeft_toRightOf="@+id/lblDuration1"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineRepsBottom"
+            android:background="@android:drawable/editbox_background" android:textSize="18sp"
+            android:singleLine="true" android:inputType="number" android:maxLength="3"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblReps2"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDurationBottom"
+            app:layout_constraintRight_toLeftOf="@+id/txtDuration2"
+            app:layout_constraintLeft_toRightOf="@+id/txtDuration1"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineRepsBottom"
+            android:text="-" android:textSize="18sp"/>
+    <EditText
+            android:id="@+id/txtReps2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDurationBottom"
+            app:layout_constraintRight_toLeftOf="@+id/lblDuration3"
+            app:layout_constraintLeft_toRightOf="@+id/lblDuration2"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineRepsBottom"
+            android:background="@android:drawable/editbox_background" android:textSize="18sp"
+            android:singleLine="true" android:inputType="numberSigned" android:maxLength="3"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblReps3"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDurationBottom"
+            app:layout_constraintLeft_toRightOf="@+id/txtDuration2"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineRepsBottom"
+            android:text="s" android:textSize="18sp"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineRepsBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.62"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDowntime1"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineRepsBottom"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDowntimeBottom"
+            android:text="Downtime: " android:textSize="18sp"/>
+    <EditText
+            android:id="@+id/txtDowntime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineRepsBottom"
+            app:layout_constraintLeft_toRightOf="@+id/lblDowntime1"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDowntimeBottom"
+            android:background="@android:drawable/editbox_background" android:textSize="18sp"
+            android:singleLine="true" android:inputType="number" android:maxLength="3"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDowntime2"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineRepsBottom"
+            app:layout_constraintLeft_toRightOf="@+id/txtDowntime"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineDowntimeBottom"
+            android:text="s" android:textSize="18sp"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineDowntimeBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.68"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblPerSide"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDowntimeBottom"
+            app:layout_constraintRight_toLeftOf="@+id/chkPerSide"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelinePerSideBottom"
+            android:text="Per Side: " android:textSize="18sp"/>
+    <CheckBox
+            android:id="@+id/chkPerSide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineDowntimeBottom"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintLeft_toRightOf="@+id/lblPerSide"
+            app:layout_constraintBottom_toTopOf="@+id/guidelinePerSideBottom"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelinePerSideBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.74"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblEquipment"
+            app:layout_constraintTop_toBottomOf="@+id/guidelinePerSideBottom"
+            app:layout_constraintRight_toLeftOf="@+id/spnEquipment"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineEquipmentBottom"
+            android:text="Equipment: " android:textSize="18sp"/>
+    <Spinner
+            android:id="@+id/spnEquipment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/equipment_array"
+            app:layout_constraintTop_toBottomOf="@+id/guidelinePerSideBottom"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintLeft_toRightOf="@+id/lblEquipment"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineEquipmentBottom"
+            android:textSize="18sp"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineEquipmentBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblURL"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineEquipmentBottom"
+            app:layout_constraintRight_toLeftOf="@+id/txtURL"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineURLBottom"
+            android:text="URL: " android:textSize="18sp"/>
+    <EditText
+            android:id="@+id/txtURL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineEquipmentBottom"
+            app:layout_constraintRight_toLeftOf="@+id/btnURL"
+            app:layout_constraintLeft_toRightOf="@+id/lblURL"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineURLBottom"
+            android:background="@android:drawable/editbox_background" android:textSize="18sp"
+            android:singleLine="true" android:fitsSystemWindows="false" android:maxLength="100"/>
+    <Button
+            android:text="@string/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/btnURL"
+            android:textAllCaps="false"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintLeft_toRightOf="@+id/txtURL"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineURLBottom"
+            android:textSize="20sp" android:textStyle="bold"
+            android:onClick="URLClick"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineURLBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.86"/>
+
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineButtonsTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.88"/>
+    <Button
+            android:text="Save"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/btnSave"
+            android:textAllCaps="false"
+            app:layout_constraintRight_toLeftOf="@+id/btnDelete"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineMainLeft"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineButtonsTop"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineButtonsBottom"
+            android:background="@drawable/button_orange_border"
+            android:textSize="34sp" android:textStyle="bold"
+            android:paddingBottom="1dp" android:paddingLeft="8dp"
+            android:paddingRight="8dp" android:paddingTop="1dp"
+            android:onClick="SaveClick"/>
+    <Button
+            android:text="Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/btnDelete"
+            android:textAllCaps="false"
+            app:layout_constraintLeft_toRightOf="@+id/btnSave"
+            app:layout_constraintRight_toLeftOf="@+id/guidelineMainRight"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineButtonsTop"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineButtonsBottom"
+            android:background="@drawable/button_red_border"
+            android:textSize="34sp" android:textStyle="bold"
+            android:paddingBottom="1dp" android:paddingLeft="8dp"
+            android:paddingRight="8dp" android:paddingTop="1dp"
+            android:onClick="DeleteClick"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guidelineButtonsBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.98"/>
+</android.support.constraint.ConstraintLayout>
